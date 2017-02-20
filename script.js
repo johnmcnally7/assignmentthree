@@ -45,6 +45,13 @@ var overlays = {
     };
 
 //control layers
-L.control.layers(null,overlays).addTo(map);
+L.control.layers(null,overlays, {collapsed:false}).addTo(map);
+
+//scalebars
+L.control.scale({
+  metric: false,
+  imperial: true,
+  maxWidth: 200,
+}).addTo(map);
 
 
